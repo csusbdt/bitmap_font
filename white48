@@ -1,0 +1,20 @@
+c++ white.cpp | exit
+
+ffmpeg	-y                   \
+	-hide_banner         \
+	-i glyphs.png        \
+	-f image2pipe        \
+	-vcodec rawvideo     \
+	-pix_fmt rgba        \
+	-s:v 480x500         \
+	-                    \
+| ./a.out |                  \
+ffmpeg 	-y                   \
+	-hide_banner         \
+	-f rawvideo          \
+	-pix_fmt rgba        \
+	-s:v 480x500         \
+	-i -                 \
+	white_glyphs_48.png  \
+
+
