@@ -80,7 +80,18 @@ window.addEventListener('load', function() {
   a.glyphs['R'] = { x: 386, y:  93, w: 26, h: 35, ay:  5 };
   a.glyphs['r'] = { x: 419, y:  99, w: 22, h: 31, ay:  9 };
 
-  //a.glyphs['M'] = { x:  43, y:  90, w: 36, h: 40, ay: 10 };
+  a.glyphs['S'] = { x:  42, y: 136, w: 21, h: 35, ay:  1 };
+  a.glyphs['s'] = { x:  76, y: 144, w: 18, h: 27, ay: 10 };
+  a.glyphs['T'] = { x: 105, y: 136, w: 28, h: 37, ay:  0 };
+  a.glyphs['t'] = { x: 140, y: 136, w: 27, h: 36, ay:  0 };
+  a.glyphs['U'] = { x: 173, y: 136, w: 29, h: 37, ay:  0 };
+  a.glyphs['u'] = { x: 208, y: 149, w: 26, h: 23, ay: 12 };
+  a.glyphs['V'] = { x: 239, y: 136, w: 27, h: 38, ay:  0 };
+  a.glyphs['v'] = { x: 276, y: 146, w: 21, h: 27, ay: 11 };
+  a.glyphs['W'] = { x: 303, y: 137, w: 39, h: 38, ay:  0 };
+  a.glyphs['w'] = { x: 345, y: 147, w: 29, h: 26, ay: 11 };
+  a.glyphs['X'] = { x: 378, y: 136, w: 31, h: 36, ay:  1 };
+  a.glyphs['x'] = { x: 416, y: 146, w: 20, h: 25, ay: 12 };
 
   a.glyphs['0'] = { x: 343, y: 243, w: 26, h: 40, ay: 10 };
   a.glyphs['1'] = { x:  42, y: 242, w: 23, h: 40, ay: 10 };
@@ -114,6 +125,6 @@ window.addEventListener('load', function() {
     }
   }
 
-  a.font.draw(clockCtx, "MmNnOoPpQqRr", 0, 40);
+  a.font.draw(clockCtx, "SsTtUuVvWwXx", 0, 40);
 });
 
