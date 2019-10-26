@@ -23,10 +23,10 @@ window.addEventListener('load', function() {
   }
   requestAnimationFrame(function(millis) {
     t = millis / 1000;
-    requestAnimationFrame(clock);
+//    requestAnimationFrame(clock);
   });
 
-  clockCtx.drawImage(a_white_glyphs_48, 200, 0);
+  clockCtx.drawImage(a_white_glyphs_48, 0, 100);
 
   function drawBox(ctx, x, y, w, h) {
     ctx.strokeStyle = "white";
@@ -41,16 +41,46 @@ window.addEventListener('load', function() {
 
   a.glyphs = {};
   a.glyphs[' '] = { x:   0, y:  00, w: 12, h: 40, ay:  0 };
-  a.glyphs['A'] = { x:  46, y:  09, w: 39, h: 40, ay: 10 };
-  a.glyphs['a'] = { x:  86, y:  25, w: 27, h: 25, ay: 14 };
-  a.glyphs['b'] = { x: 152, y:   9, w: 27, h: 39, ay: 0  };
-  a.glyphs['c'] = { x: 221, y:  23, w: 25, h: 27, ay: 12 };
-  a.glyphs['d'] = { x: 288, y:   9, w: 25, h: 39, ay: 0  };
-  a.glyphs['e'] = { x: 355, y:  25, w: 24, h: 24, ay: 15 };
-  a.glyphs['f'] = { x: 425, y:   9, w: 23, h: 39, ay: 0  };
+  a.glyphs['A'] = { x:  46, y:  09, w: 39, h: 40, ay:  0 };
+  a.glyphs['a'] = { x:  86, y:  25, w: 27, h: 25, ay: 15 };
+  a.glyphs['B'] = { x: 120, y:  09, w: 29, h: 40, ay:  0 };
+  a.glyphs['b'] = { x: 152, y:   9, w: 27, h: 39, ay:  1 };
+  a.glyphs['C'] = { x: 184, y:  09, w: 29, h: 40, ay:  0 };
+  a.glyphs['c'] = { x: 221, y:  23, w: 25, h: 27, ay: 13 };
+  a.glyphs['D'] = { x: 254, y:  09, w: 29, h: 40, ay:  0 };
+  a.glyphs['d'] = { x: 288, y:   9, w: 25, h: 39, ay:  1 };
+  a.glyphs['E'] = { x: 324, y:   9, w: 22, h: 40, ay:  0 };
+  a.glyphs['e'] = { x: 355, y:  25, w: 24, h: 24, ay: 16 };
+  a.glyphs['F'] = { x: 390, y:   9, w: 24, h: 40, ay:  0 };
+  a.glyphs['f'] = { x: 426, y:   9, w: 22, h: 39, ay:  1 };
 
-  a.glyphs['M'] = { x:  43, y:  90, w: 36, h: 40, ay: 10 };
-  a.glyphs['P'] = { x: 251, y:  92, w: 28, h: 38, ay: 12 };
+  a.glyphs['G'] = { x:  45, y:  56, w: 36, h: 35, ay:  0 };
+  a.glyphs['g'] = { x:  85, y:  57, w: 24, h: 35, ay: 15 };
+  a.glyphs['H'] = { x: 116, y:  54, w: 28, h: 37, ay:  0 };
+  a.glyphs['h'] = { x: 150, y:  53, w: 23, h: 39, ay:  1 };
+  a.glyphs['I'] = { x: 183, y:  52, w: 29, h: 40, ay:  0 };
+  a.glyphs['i'] = { x: 225, y:  54, w: 10, h: 38, ay:  3 };
+  a.glyphs['J'] = { x: 252, y:  53, w: 24, h: 40, ay:  0 };
+  a.glyphs['j'] = { x: 288, y:  55, w: 22, h: 35, ay: 16 };
+  a.glyphs['K'] = { x: 318, y:  55, w: 26, h: 35, ay:  4 };
+  a.glyphs['k'] = { x: 349, y:  54, w: 21, h: 36, ay:  3 };
+  a.glyphs['L'] = { x: 384, y:  55, w: 24, h: 34, ay:  5 };
+  a.glyphs['l'] = { x: 425, y:  53, w:  9, h: 36, ay:  4 };
+
+  a.glyphs['M'] = { x:  43, y:  94, w: 36, h: 35, ay:  0 };
+  a.glyphs['m'] = { x:  80, y: 104, w: 30, h: 25, ay: 10 };
+  a.glyphs['N'] = { x: 114, y:  97, w: 24, h: 32, ay:  3 };
+  a.glyphs['n'] = { x: 149, y: 104, w: 19, h: 23, ay: 12 };
+  a.glyphs['O'] = { x: 183, y:  94, w: 29, h: 35, ay:  0 };
+  a.glyphs['o'] = { x: 221, y: 104, w: 20, h: 23, ay: 12 };
+  a.glyphs['P'] = { x: 252, y:  94, w: 27, h: 34, ay:  1 };
+  a.glyphs['p'] = { x: 286, y:  98, w: 21, h: 31, ay: 19 };
+  a.glyphs['Q'] = { x: 317, y:  94, w: 30, h: 35, ay:  4 };
+  a.glyphs['q'] = { x: 356, y:  97, w: 19, h: 32, ay: 20 };
+  a.glyphs['R'] = { x: 386, y:  93, w: 26, h: 35, ay:  5 };
+  a.glyphs['r'] = { x: 419, y:  99, w: 22, h: 31, ay:  9 };
+
+  //a.glyphs['M'] = { x:  43, y:  90, w: 36, h: 40, ay: 10 };
 
   a.glyphs['0'] = { x: 343, y: 243, w: 26, h: 40, ay: 10 };
   a.glyphs['1'] = { x:  42, y: 242, w: 23, h: 40, ay: 10 };
@@ -74,7 +104,7 @@ window.addEventListener('load', function() {
       if (a.glyphs.hasOwnProperty(c)) {
         const g = a.glyphs[c];
         ctx.drawImage(a_white_glyphs_48, g.x, g.y, g.w, g.h, x, y + g.ay, g.w, g.h);
-        //drawBox(ctx, x, y + g.ay, g.w, g.h);
+        drawBox(ctx, x, y + g.ay, g.w, g.h);
         x += g.w;
       } else {
         ctx.fillStyle = "white";
@@ -84,6 +114,6 @@ window.addEventListener('load', function() {
     }
   }
 
-  //a.font.draw(clockCtx, "7:04 PM", 0, 40);
+  a.font.draw(clockCtx, "MmNnOoPpQqRr", 0, 40);
 });
 
