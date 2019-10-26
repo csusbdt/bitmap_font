@@ -26,8 +26,6 @@ window.addEventListener('load', function() {
 //    requestAnimationFrame(clock);
   });
 
-  clockCtx.drawImage(a_white_glyphs_48, 0, 100);
-
   function drawBox(ctx, x, y, w, h) {
     ctx.strokeStyle = "white";
     ctx.beginPath();
@@ -93,6 +91,11 @@ window.addEventListener('load', function() {
   a.glyphs['X'] = { x: 378, y: 136, w: 31, h: 36, ay:  1 };
   a.glyphs['x'] = { x: 416, y: 146, w: 20, h: 25, ay: 12 };
 
+  a.glyphs['Y'] = { x:  41, y: 179, w: 25, h: 35, ay:  1 };
+  a.glyphs['y'] = { x:  77, y: 187, w: 18, h: 27, ay: 20 };
+  a.glyphs['Z'] = { x: 108, y: 179, w: 30, h: 36, ay:  0 };
+  a.glyphs['z'] = { x: 140, y: 191, w: 27, h: 23, ay: 13 };
+
   a.glyphs['0'] = { x: 343, y: 243, w: 26, h: 40, ay: 10 };
   a.glyphs['1'] = { x:  42, y: 242, w: 23, h: 40, ay: 10 };
   a.glyphs['2'] = { x:  74, y: 243, w: 28, h: 40, ay: 10 };
@@ -105,6 +108,37 @@ window.addEventListener('load', function() {
   a.glyphs['9'] = { x: 312, y: 243, w: 25, h: 40, ay: 10 };
 
   a.glyphs[':'] = { x:  42, y: 310, w: 23, h: 40, ay: 10 };
+  a.glyphs[';'] = { x:  74, y: 310, w: 28, h: 40, ay: 10 };
+  a.glyphs[','] = { x: 109, y: 330, w: 27, h: 20, ay: 30 };
+  a.glyphs['.'] = { x: 142, y: 330, w: 30, h: 20, ay: 30 };
+  a.glyphs['~'] = { x: 177, y: 320, w: 24, h: 20, ay: 20 };
+  a.glyphs['@'] = { x: 209, y: 320, w: 25, h: 30, ay: 20 };
+  a.glyphs['#'] = { x: 241, y: 320, w: 30, h: 28, ay: 22 };
+  a.glyphs['$'] = { x: 279, y: 310, w: 22, h: 40, ay: 10 };
+  a.glyphs['%'] = { x: 310, y: 310, w: 28, h: 40, ay: 10 };
+  a.glyphs['^'] = { x: 343, y: 320, w: 28, h: 20, ay: 10 };
+  a.glyphs['&'] = { x: 380, y: 310, w: 25, h: 40, ay: 10 };
+  a.glyphs['*'] = { x: 412, y: 310, w: 25, h: 40, ay: 10 };
+
+  a.glyphs['('] = { x:  42, y: 380, w: 23, h: 40, ay: 10 };
+  a.glyphs[')'] = { x:  74, y: 380, w: 28, h: 40, ay: 10 };
+  a.glyphs['_'] = { x: 108, y: 405, w: 26, h: 20, ay: 30 };
+  a.glyphs['-'] = { x: 142, y: 394, w: 30, h: 10, ay: 25 };
+  a.glyphs['+'] = { x: 177, y: 389, w: 24, h: 21, ay: 20 };
+  a.glyphs['='] = { x: 209, y: 390, w: 25, h: 18, ay: 24 };
+  a.glyphs['{'] = { x: 241, y: 377, w: 30, h: 43, ay:  6 };
+  a.glyphs['}'] = { x: 279, y: 377, w: 30, h: 43, ay:  6 };
+  a.glyphs['['] = { x: 313, y: 378, w: 21, h: 40, ay: 10 };
+  a.glyphs[']'] = { x: 346, y: 378, w: 21, h: 40, ay: 10 };
+  a.glyphs['|'] = { x: 384, y: 378, w: 13, h: 40, ay: 10 };
+  a.glyphs['\\'] = { x: 410, y: 379, w: 27, h: 38, ay: 12 };
+
+  a.glyphs['/'] = { x:  42, y: 446, w: 27, h: 36, ay: 10 };
+  a.glyphs['"'] = { x: 142, y: 444, w: 30, h: 20, ay:  8 };
+  a.glyphs['\''] = { x: 177, y: 445, w: 24, h: 17, ay:  8 };
+  a.glyphs['`'] = { x: 209, y: 445, w: 25, h: 18, ay: 8 };
+  a.glyphs['!'] = { x: 241, y: 444, w: 30, h: 43, ay:  6 };
+  a.glyphs['?'] = { x: 279, y: 444, w: 30, h: 43, ay:  6 };
 
   a.font = {};
   a.font.draw = function(ctx, text, x, y) {
@@ -115,7 +149,7 @@ window.addEventListener('load', function() {
       if (a.glyphs.hasOwnProperty(c)) {
         const g = a.glyphs[c];
         ctx.drawImage(a_white_glyphs_48, g.x, g.y, g.w, g.h, x, y + g.ay, g.w, g.h);
-        drawBox(ctx, x, y + g.ay, g.w, g.h);
+//        drawBox(ctx, x, y + g.ay, g.w, g.h);
         x += g.w;
       } else {
         ctx.fillStyle = "white";
@@ -125,6 +159,15 @@ window.addEventListener('load', function() {
     }
   }
 
-  a.font.draw(clockCtx, "SsTtUuVvWwXx", 0, 40);
+//  clockCtx.drawImage(a_white_glyphs_48, 30, 0);
+  a.font.draw(clockCtx, "AaBbCcDdEeFf"  , 100,   0);
+  a.font.draw(clockCtx, "GgHhIiJjKkLl"  , 100,  50);
+  a.font.draw(clockCtx, "MmNnOoPpQqRr"  , 100, 100);
+  a.font.draw(clockCtx, "SsTtUuVvWwXx"  , 100, 140);
+  a.font.draw(clockCtx, "YyZz"          , 100, 180);
+  a.font.draw(clockCtx, "1234567890"    , 100, 220);
+  a.font.draw(clockCtx, ":;,.~@#$%^&*"  , 100, 260);
+  a.font.draw(clockCtx, "()_-+={}[]|\\" , 100, 300);
+  a.font.draw(clockCtx, "/\"'`!?"       , 300, 180);
 });
 
