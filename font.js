@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
   window.a = window.a || {};
   a.font   =             {};
-  //a.font.isBox = true;
+//  a.font.isBox = true;
 
   function drawBox(ctx, x, y, w, h) {
     ctx.strokeStyle = "white";
@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
   }
 
   a.font.glyphs = {};
-  a.font.glyphs[' '] = { x:   0, y:  00, w: 12, h: 40, ay:  0 };
+  a.font.glyphs[' '] = { x:   0, y:  00, w: 10, h: 40, ay:  0 };
   a.font.glyphs['A'] = { x:  46, y:  09, w: 39, h: 40, ay:  5 };
   a.font.glyphs['a'] = { x:  86, y:  25, w: 27, h: 25, ay: 15 };
   a.font.glyphs['B'] = { x: 120, y:  09, w: 29, h: 40, ay:  0 };
@@ -42,13 +42,13 @@ window.addEventListener('load', function() {
   a.font.glyphs['L'] = { x: 384, y:  55, w: 24, h: 34, ay:  5 };
   a.font.glyphs['l'] = { x: 425, y:  53, w:  9, h: 36, ay:  4 };
 
-  a.font.glyphs['M'] = { x:  43, y:  96, w: 36, h: 34, ay: 11 };
+  a.font.glyphs['M'] = { x:  43, y:  96, w: 36, h: 34, ay:  9 };
   a.font.glyphs['m'] = { x:  80, y: 104, w: 30, h: 25, ay: 10 };
   a.font.glyphs['N'] = { x: 114, y:  97, w: 24, h: 32, ay:  3 };
   a.font.glyphs['n'] = { x: 149, y: 104, w: 19, h: 23, ay: 12 };
   a.font.glyphs['O'] = { x: 183, y:  94, w: 29, h: 35, ay:  0 };
   a.font.glyphs['o'] = { x: 221, y: 104, w: 20, h: 23, ay: 12 };
-  a.font.glyphs['P'] = { x: 252, y:  94, w: 27, h: 34, ay: 11 };
+  a.font.glyphs['P'] = { x: 252, y:  94, w: 27, h: 34, ay:  9 };
   a.font.glyphs['p'] = { x: 286, y:  98, w: 21, h: 31, ay: 19 };
   a.font.glyphs['Q'] = { x: 317, y:  94, w: 30, h: 35, ay:  4 };
   a.font.glyphs['q'] = { x: 356, y:  97, w: 19, h: 32, ay: 20 };
@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
   a.font.glyphs['8'] = { x: 279, y: 243, w: 24, h: 40, ay:  5 };
   a.font.glyphs['9'] = { x: 312, y: 243, w: 25, h: 40, ay:  5 };
 
-  a.font.glyphs[':'] = { x:  42, y: 310, w: 23, h: 40, ay:  5 };
+  a.font.glyphs[':'] = { x:  47, y: 310, w: 13, h: 40, ay:  5 };
   a.font.glyphs[';'] = { x:  74, y: 310, w: 28, h: 40, ay: 10 };
   a.font.glyphs[','] = { x: 109, y: 330, w: 27, h: 20, ay: 30 };
   a.font.glyphs['.'] = { x: 142, y: 330, w: 30, h: 20, ay: 30 };
