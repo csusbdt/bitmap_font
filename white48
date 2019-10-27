@@ -17,4 +17,5 @@ ffmpeg 	-y                   \
 	-i -                 \
 	white_glyphs_48.png  \
 
+rm -f a.out
 
