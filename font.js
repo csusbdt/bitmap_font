@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
   window.a = window.a || {};
-  a.font       = {};
+  a.font   =             {};
   //a.font.isBox = true;
 
   function drawBox(ctx, x, y, w, h) {
@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
 
   a.font.glyphs = {};
   a.font.glyphs[' '] = { x:   0, y:  00, w: 12, h: 40, ay:  0 };
-  a.font.glyphs['A'] = { x:  46, y:  09, w: 39, h: 40, ay:  0 };
+  a.font.glyphs['A'] = { x:  46, y:  09, w: 39, h: 40, ay:  5 };
   a.font.glyphs['a'] = { x:  86, y:  25, w: 27, h: 25, ay: 15 };
   a.font.glyphs['B'] = { x: 120, y:  09, w: 29, h: 40, ay:  0 };
   a.font.glyphs['b'] = { x: 152, y:   9, w: 27, h: 39, ay:  1 };

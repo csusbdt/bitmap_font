@@ -13,12 +13,16 @@ window.addEventListener('load', function() {
       hour -= 12; 
       ampm = "PM"; 
     }
+    if (hour === 0) {
+      hour = 12;
+    }
     let minute = now.getMinutes();
     if (minute < 10) minute = "0" + minute; 
     let s = hour + ":" + minute + " " + ampm;
     a.font.draw(clockCtx, s, 0, 0);
     requestAnimationFrame(clock);
   }
+
   requestAnimationFrame(function(millis) {
     t = millis / 1000;
     requestAnimationFrame(clock);
