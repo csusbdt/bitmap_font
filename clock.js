@@ -16,10 +16,14 @@ window.addEventListener('load', function() {
     if (hour === 0) {
       hour = 12;
     }
+    if (hour < 10) hour = "  " + hour;
     let minute = now.getMinutes();
     if (minute < 10) minute = "0" + minute; 
-    let s = hour + ":" + minute + " " + ampm;
+    let seconds = now.getSeconds();
+    if (seconds < 10) seconds = "0" + seconds; 
+    let s = hour + ":" + minute + ":" + seconds; // + " " + ampm;
     a.font.draw(clockCtx, s, 0, 0);
+    a.font.draw(clockCtx, ampm, 200, 0);
     requestAnimationFrame(clock);
   }
 
